@@ -1,0 +1,12 @@
+export { DashboardOverview } from "./overview";
+export { WeatherView } from "./weather";
+export { CropHealthView } from "./crop-health";
+export { SoilHealthView } from "./soil-health";
+export { MarketPricesView } from "./market-prices";
+export { AIAdvisorView } from "./ai-advisor";
+export { FieldManagementView } from "./field-management";
+export { IrrigationView } from "./irrigation";
+export { TasksView } from "./tasks";
+export { AlertsView } from "./alerts";
+export { ReportsView } from "./reports";
+export { SettingsView } from "./settings";

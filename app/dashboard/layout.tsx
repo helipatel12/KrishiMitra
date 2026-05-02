@@ -3,8 +3,13 @@
 import { useAuth } from "@/hooks/useAuth";
 import { useRouter } from "next/navigation";
 import { useEffect } from "react";
+import { DashboardShell } from "@/components/dashboard/dashboard-shell";
 
-export default function Layout({ children }: { children: React.ReactNode }) {
+export default function DashboardLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   const { user, loading } = useAuth();
   const router = useRouter();
 
@@ -21,10 +26,16 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         style={{ background: "var(--cream)" }}
       >
         <div style={{ textAlign: "center" }}>
-          <div style={{ fontSize: "2.5rem", marginBottom: "1rem" }} className="animate-float">
+          <div
+            style={{ fontSize: "2.5rem", marginBottom: "1rem" }}
+            className="animate-float"
+          >
             🌱
           </div>
-          <p className="serif" style={{ color: "var(--text-muted)", fontSize: "1rem" }}>
+          <p
+            className="serif"
+            style={{ color: "var(--text-muted)", fontSize: "1rem" }}
+          >
             Loading your farm…
           </p>
         </div>
@@ -34,5 +45,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 
   if (!user) return null;
 
-  return <>{children}</>;
+  const displayName =
+    user.displayName || user.email?.split("@")[0] || "Farmer";
+
+  return <DashboardShell displayName={displayName}>{children}</DashboardShell>;
 }

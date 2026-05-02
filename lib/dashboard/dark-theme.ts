@@ -1,0 +1,21 @@
+/** Dark dashboard surfaces (matches KrishiMitra mockups). */
+export const D = {
+  bg: "#0B0E11",
+  card: "#151A1F",
+  card2: "#1A2128",
+  border: "rgba(255, 255, 255, 0.08)",
+  text: "#F4F6F8",
+  muted: "rgba(244, 246, 248, 0.55)",
+  faint: "rgba(244, 246, 248, 0.35)",
+  accent: "#34D399",
+  accentStrong: "#10B981",
+  accentDim: "rgba(52, 211, 153, 0.12)",
+  up: "#34D399",
+  down: "#F87171",
+  warn: "#FBBF24",
+  blue: "#60A5FA",
+  purple: "#A78BFA",
+  orange: "#FB923C",
+  red: "#EF4444",
+  yellow: "#FACC15",
+} as const;

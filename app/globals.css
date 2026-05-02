@@ -19,15 +19,35 @@
   --text-muted: #6b7f6d;
   --background: var(--cream);
   --foreground: var(--ink);
+  --card-bg: #ffffff;
+  --nav-pill: rgba(122, 158, 126, 0.12);
+}
+
+/* Global dark theme (marketing + auth + anywhere using CSS variables) */
+html[data-theme="dark"] {
+  --sage: #6ee7b7;
+  --sage-light: #a7f3d0;
+  --sage-dark: #34d399;
+  --cream: #0f1419;
+  --cream-dark: #1a2128;
+  --forest: #6ee7b7;
+  --forest-mid: #34d399;
+  --ink: #f4f6f8;
+  --text-muted: rgba(244, 246, 248, 0.6);
+  --background: #0b0e11;
+  --foreground: #f4f6f8;
+  --card-bg: #151a1f;
+  --nav-pill: rgba(52, 211, 153, 0.15);
 }
 
 * { box-sizing: border-box; }
 
 body {
-  background: var(--cream);
-  color: var(--ink);
+  background: var(--background);
+  color: var(--foreground);
   font-family: "DM Sans", sans-serif;
   -webkit-font-smoothing: antialiased;
+  transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 h1, h2, h3, .serif { font-family: "Fraunces", serif; }
@@ -97,7 +117,7 @@ h1, h2, h3, .serif { font-family: "Fraunces", serif; }
   padding: 0.75rem 1rem;
   border: 1.5px solid var(--cream-dark);
   border-radius: 12px;
-  background: white;
+  background: var(--card-bg);
   font-family: "DM Sans", sans-serif;
   font-size: 0.9rem;
   color: var(--ink);
